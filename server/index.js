@@ -20,7 +20,7 @@ io.on('connection',(socket)=>{
         io.to(room).emit('user:joined',{email,id:socket.id}); //sending socket id to room
         socket.join(room);
 
-        io.to(socket.id).emit('room:joined',data); //sending because user will navigate to room
+        io.to(socket.id).emit('room:joined',data); //sendinhg because user will navigate to room
     })
 
     socket.on('user:call',({to,offer})=>{
